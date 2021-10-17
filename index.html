@@ -1,0 +1,260 @@
+<html>
+  <style>
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+a {
+  text-decoration: none;
+}
+  .nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+  margin: 0 1rem;
+  list-style-type: none;
+}
+
+
+.nav-list a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+
+}
+
+.nav-list a:hover {
+  background: darkgrey;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: lightgrey;
+
+}
+
+ h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 50px;
+}
+    
+.welcome-section p {
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  color: black;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background:white;
+ 
+}
+
+.project-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.project-tile {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+ .project-title:hover {
+  background: pink;
+}
+
+
+.project-title {
+  padding: 10px;
+  background-color: darkgrey;
+  color: black;
+
+
+    }
+    
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background: lightgrey;
+  margin-top: 5rem;
+}
+
+.contact-section p {
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  color: black;
+
+}
+
+.contact-section h2 {
+  font-style: bold;
+  font-size: 5rem;
+  padding-bottom: 0;
+
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+
+}
+
+.contact-links a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: grey;
+  padding: 1rem;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkblue;
+  background-color: lightgrey;
+  padding-top: 50px;
+  margin-right: 4rem;
+}
+    
+.footer-section p{
+  font-size: 1rem;
+    }
+
+
+</style>
+
+  <head><link rel="stylesheet" href="//use.fontawesome.com/releases/v5.10.2/css/all.css"></head>
+  
+<nav id="navbar" class="nav">
+  <ul class="nav-list">
+    <li>
+      <a href="#welcome-section">About</a>
+    </li>
+    <li>
+      <a href="#projects">Work</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<section id="welcome-section" class="welcome-section">
+  <h1>Hey I am Agent_JasY</h1>
+  <p>a web developer</p>
+</section>
+
+
+<section id="projects" class="projects-section">
+  <h2 class="projects-section-header">Showcasing one of my projects</h2>
+
+  <a
+      href="https://codepen.io/freeCodeCamp/full/zNqgVx"
+      target="_blank"
+      class="project-tile">
+
+  <img
+        class="project-image"
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+        alt="project"/>
+      
+  <p class="project-title">Tribute Page</p>
+    </a>
+    
+
+<section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    <h2>Let's work together...</h2>
+    <p>Team work makes dream work</p>
+  </div>    
+
+<div class="contact-links">
+  <a href="mailto:japple.air@gmail.com" class="btn-contact">
+  <i class="far fa-envelope-open fa-2x"></i> Email Me
+  </a>
+
+  <a id="profile-link" href="https://codepen.io/japple-air" class="btn-contact">
+    <i class="far fa-user fa-2x"></i> Profile
+    </a>
+  </div>
+  
+<footer class="footer-section">
+  <p>
+    <i class="far fa-copyright"></i> 2021. Design by Agent_JasY
+  </p>
+</footer>
+
+</html>
