@@ -1,7 +1,13 @@
-<html>
-  <style>
-
-/* Base reset */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.10.2/css/all.css">
+</head>
+<style>
+/* Base reset - remove the white border */
 * {
   margin: 0;
   padding: 0;
@@ -32,14 +38,21 @@
 a {
   text-decoration: none;
 }
-  .nav {
+
+/*also helps to remove the white border*/
+body {
+  margin: 0 auto;
+}
+
+/*navbar*/
+.nav {
   display: flex;
   justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: black;
+  background:#333;
 }
 
 .nav-list {
@@ -64,7 +77,8 @@ a {
   background: darkgrey;
 }
 
-.welcome-section {
+/*mid-section*/
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,40 +86,39 @@ a {
   width: 100%;
   height: 100vh;
   background-color: lightgrey;
-
+  margin: 0px;
+  padding: 0px;
 }
 
- h1 {
+h1 {
   font-size: 4rem;
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  color:#333;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  padding: 50px;
+  color: #333;
+  padding: 5rem;
+  margin-top: 0px;
 }
-    
+
+h3 {
+  font-size: 2rem;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 200;
+  color: #333;
+  padding: 2rem;
+}
+
 .welcome-section p {
   font-size: 2rem;
   font-weight: 200;
   font-style: italic;
-  color: black;
-}
-
-.projects-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  background:white;
- 
+  color:#333;
 }
 
 .project-image {
@@ -114,46 +127,38 @@ h2 {
   object-fit: cover;
 }
 
-.project-tile {
+#projects {
+  background-color: white;
+}
+
+p {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  text-align: center;
 }
 
  .project-title:hover {
   background: pink;
 }
 
-
 .project-title {
   padding: 10px;
   background-color: darkgrey;
-  color: black;
-
-
-    }
-    
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-  background: lightgrey;
-  margin-top: 5rem;
+  color:#333;
 }
 
-.contact-section p {
+
+#contact p {
   font-size: 2rem;
   font-weight: 200;
   font-style: italic;
-  color: black;
+  color:#333;
+  padding: 1rem;
 
 }
 
-.contact-section h2 {
+#contact h2 {
   font-style: bold;
   font-size: 5rem;
   padding-bottom: 0;
@@ -191,12 +196,9 @@ h2 {
 .footer-section p{
   font-size: 1rem;
     }
-
-
 </style>
 
-  <head><link rel="stylesheet" href="//use.fontawesome.com/releases/v5.10.2/css/all.css"></head>
-  
+
 <nav id="navbar" class="nav">
   <ul class="nav-list">
     <li>
@@ -212,14 +214,16 @@ h2 {
 </nav>
 
 
-<section id="welcome-section" class="welcome-section">
+
+<body>
+
+<div id="welcome-section" class="container">
   <h1>Hey I am Agent_JasY</h1>
-  <p>a web developer</p>
-</section>
+  <h3>a web developer</h3>
+</div>
 
-
-<section id="projects" class="projects-section">
-  <h2 class="projects-section-header">Showcasing one of my projects</h2>
+<div id="projects" class="container">
+  <h2>My Recent Work</h2>
 
   <a
       href="https://codepen.io/freeCodeCamp/full/zNqgVx"
@@ -233,28 +237,31 @@ h2 {
       
   <p class="project-title">Tribute Page</p>
     </a>
-    
+</div>
 
-<section id="contact" class="contact-section">
-  <div class="contact-section-header">
-    <h2>Let's work together...</h2>
-    <p>Team work makes dream work</p>
-  </div>    
+<div id="contact" class="container">
+  <h2>Let's work together...</h2>
+  <p>Team work makes dream work</p>
 
-<div class="contact-links">
-  <a href="mailto:japple.air@gmail.com" class="btn-contact">
-  <i class="far fa-envelope-open fa-2x"></i> Email Me
-  </a>
-
-  <a id="profile-link" href="https://codepen.io/japple-air" class="btn-contact">
-    <i class="far fa-user fa-2x"></i> Profile
+  <div class="contact-links">
+    <a href="mailto:japple.air@gmail.com" class="btn-contact">
+    <i class="far fa-envelope-open fa-2x"></i> Email Me
     </a>
-  </div>
   
+    <a id="profile-link" href="https://codepen.io/japple-air" class="btn-contact">
+      <i class="far fa-user fa-2x"></i> Profile
+      </a>
+    </div>
+</div>
+
+
 <footer class="footer-section">
   <p>
     <i class="far fa-copyright"></i> 2021. Design by Agent_JasY
   </p>
 </footer>
 
+
+
+</body>
 </html>
