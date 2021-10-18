@@ -39,6 +39,40 @@ a {
   text-decoration: none;
 }
 
+.nav-list a:before {
+  content: "[";
+  margin-right: 10px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.nav-list a:after {
+  content: "]";
+  margin-left: 10px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.nav-list a:hover:before,
+.nav-list a:hover:after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
 /*also helps to remove the white border*/
 body {
   margin: 0 auto;
@@ -68,14 +102,17 @@ body {
   font-size: 1.5rem;
   padding: 1rem;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto";
+  font-weight: 200;
   color: white;
 
 }
 
+/*
 .nav-list a:hover {
   background: darkgrey;
 }
+*/
 
 /*mid-section*/
 .container {
